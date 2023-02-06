@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Qualy";
+  src: url("../../assets/font/Qualy.e683c4c.ttf");
+}
+#navbar > div {
+  display: flex;
+  font-size: large;
+  font-weight: normal;
+  height: 100%;
+  align-items: center;
+  transition: 0.5s;
+  position: relative;
+}
+#logo {
+  width: 2rem;
+}
+#header {
+  background-color: #233657;
+  transition: 0.5s;
+  width: 100%;
+  z-index: 99;
+}
+#header > a {
+  display: flex;
+  align-items: center;
+}
+#dropdown {
+  display: none;
+  transition: 0.5s;
+}
+#service {
+  display: inline-block;
+}
+#service:hover #dropdown {
+  display: block;
+}
+#panah {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+#service:hover #panah {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+#parentBurger {
+  transition: 0.5s;
+}
+#burgerDrop {
+  transition: 0.5s;
+}
+.show {
+  transform: translateY(2.75rem);
+}
+
+.DontShow {
+  transform: translateY(-700px);
+}
+#panahChild {
+  transition: 0.5s;
+}
+#childDrop {
+  opacity: 1;
+  animation: childDrop 0.5s;
+  height: 120px;
+}
+#child {
+  opacity: 1;
+  animation: child 1s;
+}
+@keyframes child {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes childDrop {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 120px;
+  }
+}
